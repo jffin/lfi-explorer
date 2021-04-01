@@ -103,3 +103,6 @@ tags
 [._]*.un~
 
 # End of https://www.toptal.com/developers/gitignore/api/go,git,osx,linux,vim
+#
+# Custom
+result.txt

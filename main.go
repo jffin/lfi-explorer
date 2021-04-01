@@ -48,6 +48,7 @@ func main() {
 		}
 	}
 
+	results = removeDuplicateValues(results)
 	writeToFile(results)
 }
 
@@ -109,4 +110,19 @@ func printResults(results []string) {
 	for _, value := range results {
 		fmt.Println(value)
 	}
+}
+
+func removeDuplicateValues(stringSlice []string) (list []string) {
+	keys := make(map[string]bool)
+
+	// If the key(values of the slice) is not equal
+	// to the already present value in new slice (list)
+	// then we append it. else we jump on another element.
+	for _, entry := range stringSlice {
+		if _, value := keys[entry]; !value {
+			keys[entry] = true
+			list = append(list, entry)
+		}
+	}
+	return list
 }
