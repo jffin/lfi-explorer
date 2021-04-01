@@ -54,7 +54,6 @@ func main() {
 func makeRequest(u string) (string, error) {
 	res, err := http.Get(u)
 	if err != nil {
-		log.Fatal(err)
 		return "fatal", err
 	}
 
