@@ -1,3 +1,3 @@
-module github.com/jffin/lfi_explorer
+module github.com/jffin/lfi-explorer
 
 go 1.16
